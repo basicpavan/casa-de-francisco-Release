@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doe Agora!</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/css/doa.css">
+</head>
+<body>
+  <header>
+        <div class="header-container">
+            <div class="barra-marrom-logo"></div>
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="#"><img class="logo-doacao" src="/assets/logo.png" alt="Logo Casa de Francisco"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="cadastro-section">
+        <div class="container-cadastro">
+            
+            <div class="form-card">
+                
+                <div class="steps-container">
+                    
+                    <div id="step-nome" class="form-step active">
+                        <label>
+                            <h2>Nome</h2>
+                        </label>
+                        <input type="text" placeholder="Digite seu nome" class="input-padrao input1">
+                    </div>
+
+                    <div id="step-email" class="form-step inactive">
+                        <label>
+                            <h2>Email</h2>
+                        </label>
+                        <input type="email" placeholder="Digite seu email" class="input-padrao input2">
+                    </div>
+                    
+                </div>
+
+                <div class="actions-grid">
+                    
+                    <div class="action-left">
+                        <button id="btnVoltar" class="btn-action btn-secondary hidden" onclick="voltarPasso()">
+                            Voltar
+                        </button>
+                    </div>
+
+                    <div class="action-right">
+                        <button id="btnProximo" class="btn-action btn-primary" onclick="proximoPasso()">
+                            Próximo
+                        </button>
+                        
+                        <a href="obrigado.html" id="btnSalvar" class="btn-action btn-primary hidden">
+                            Salvar
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+        const stepNome = document.getElementById('step-nome');
+        const stepEmail = document.getElementById('step-email');
+        const btnVoltar = document.getElementById('btnVoltar');
+        const btnProximo = document.getElementById('btnProximo');
+        const btnSalvar = document.getElementById('btnSalvar');
+
+        function proximoPasso() {
+            // Esconde Nome, Mostra Email
+            stepNome.classList.remove('active');
+            stepNome.classList.add('inactive');
+            
+            stepEmail.classList.remove('inactive');
+            stepEmail.classList.add('active');
+
+            // Troca os botões
+            btnVoltar.classList.remove('hidden');
+            btnProximo.classList.add('hidden');
+            btnSalvar.classList.remove('hidden');
+        }
+
+        function voltarPasso() {
+            // Esconde Email, Mostra Nome
+            stepEmail.classList.remove('active');
+            stepEmail.classList.add('inactive');
+
+            stepNome.classList.remove('inactive');
+            stepNome.classList.add('active');
+
+            // Troca os botões
+            btnVoltar.classList.add('hidden');
+            btnSalvar.classList.add('hidden');
+            btnProximo.classList.remove('hidden');
+        }
+    </script>
+</html>

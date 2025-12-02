@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Feedback</title>
+    <style>
+        /*
+            Análise Visual da Imagem:
+            - Cor de fundo: Um bege muito claro, quase creme. (Estimativa: #f5f5dc ou #f8f8e8)
+            - Fonte: Parece ser uma fonte serifada simples e limpa, como Georgia.
+            - Cor do texto: Preto padrão.
+            - Borda dos campos: Linha preta fina.
+            - Layout: Título centralizado. Campos Nome e Email lado a lado. Campo Comentário abaixo e centralizado, mais largo.
+        */
+
+        body {
+            /* Cor de fundo baseada na imagem (bege claro) */
+            background-color: #f8f8e8; /* Um tom de creme/bege claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            /* Fonte serifada simples */
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            color: #000000;
+        }
+
+        .container {
+            width: 80%; /* Ajuste para o tamanho do formulário na imagem */
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+
+        .input-group-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 48%; /* Para que fiquem lado a lado com um pequeno espaço */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input-field label {
+            align-self: center;
+        }
+
+        .input-field label,
+        .input-group-bottom label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1em;
+            text-align: center; /* Centraliza o texto do label */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #000000; /* Borda preta fina */
+            background-color: transparent; /* Fundo transparente/branco */
+            outline: none;
+            font-size: 1em;
+            /* Para replicar o visual exato da imagem, onde o texto é centralizado */
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            height: 40px; /* Altura dos campos de texto */
+        }
+
+        .input-group-bottom {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input-group-bottom label {
+            align-self: center;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            resize: none;
+            height: 150px; /* Altura do campo de comentário */
+            width: 70%; /* Ajuste para ser mais largo que os campos de cima, como na imagem */
+            margin: 0 auto 20px auto; /* Centraliza o textarea e adiciona margem inferior */
+        }
+
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            color: #000000;
+            background-color: transparent; /* Fundo transparente para manter a estética */
+            border: 1px solid #000000; /* Borda preta fina */
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: rgba(0, 0, 0, 0.05); /* Leve destaque ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>O que podemos melhorar na Casa de Francisco</h1>
+        <form action="https://api.staticforms.dev/submit" method="POST">
+            <input type="hidden" name="accessKey" required value="sf_i028f367m92clb83j42cc9ln">
+            <input type="hidden" name="redirectTo" value="index.html">
+
+
+            <div class="input-group-top">
+                <div class="input-field">
+                    <label for="nome">Nome</label>
+                    <input class="input1" type="text" id="nome" name="nome">
+                </div>
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input class="input2" type="email" id="email" name="email">
+                </div>
+            </div>
+            <div class="input-group-bottom">
+                <label for="comentario">Comentário</label>
+                <textarea class="input3" id="comentario" name="comentario"></textarea>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="submit-button">Enviar FeedBack</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

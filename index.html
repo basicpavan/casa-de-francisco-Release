@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de Francisco</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="assets/logo.png">
+    
+</head>
+
+<body>
+    
+    <header id="header">
+        <div class="header-container">
+            <div class="barra-marrom"></div>
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li>|</li>
+                    <li><a href="#evento">Eventos</a></li>
+                    <li>|</li>
+                    <li class="logo-spacer"><a href="#header"><img class="logo" src="assets/logo.png" alt="Logo Casa de Francisco"></a></li>
+                    <li>|</li>
+                    <li><a href="#ajuda">Contato</a></li>
+                    <li>|</li>
+                    <li><a href="#petry">Dúvidas</a></li>
+                </ul>
+            </nav>
+            <nav class="sub-nav">
+                <a href="#">Seja um voluntário</a>
+            </nav>
+        </div>
+    </header>
+    <div class="linha"></div>
+
+    <main>
+        <section class="hero-carousel">
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="assets/banner1.jpg" alt="Banner 1"> <div class="carousel-caption">
+                <h2>Bem-vindo à Casa de Francisco</h2>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <img src="assets/banner2.jpg" alt="Banner 2"> </div>
+
+        <div class="carousel-slide">
+            <img src="assets/banner3.jpg" alt="Banner 3"> </div>
+    </div>
+
+    <button class="carousel-btn prev" onclick="mudarSlide(-1)">&#10094;</button>
+    <button class="carousel-btn next" onclick="mudarSlide(1)">&#10095;</button>
+
+    <div class="carousel-dots">
+        <span class="dot active" onclick="irParaSlide(0)"></span>
+        <span class="dot" onclick="irParaSlide(1)"></span>
+        <span class="dot" onclick="irParaSlide(2)"></span>
+    </div>
+</section>
+
+        <section class="welcome-section">
+            <div class="wel-titulo">
+                <h1>Bem-vindo à Casa de Francisco</h1>
+            </div>
+            <div id="wel-p" class="wel-p">
+                
+            </div>
+        </section>
+    </main>
+
+    <div class="cards-area">
+        <div class="fundo-marrom"></div>
+        <a id="evento"><h1>Eventos</h1></a>
+        
+        
+        <div class="services-grid">
+            
+            <div class="service">
+                <div id="icone-passe" class="icon icon-passe"></div>
+                <div class="evento">
+                    <img src="assets/homens.png" alt="casa" class="casa">
+                    <h4>Palestras públicas e passes</h4>
+                    <p>Quinta-feira às 20:00h <br> Sábado às 18:00h</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <div id="icone-atividades" class="icon icon-atividades"></div>
+                <div class="evento">
+                    <img src="assets/livro.png" alt="pessoas" class="religiosa">
+                    <h4>Estudos sistematizados</h4>
+                    <p>Segunda-feira 20:00h <br> Terça-feira 20:00h <br> Quarta-feira 20:00h <br> Sábados 16:00h</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <div id="icone-reunioes" class="icon icon-reunioes"></div>
+                <div class="evento">
+                    <img src="assets/fraternidade.png" alt="fraterno" class="fraterno">
+                    <h4>Atendimento fraterno</h4>
+                    <p>Quinta-feira às 19:00h <br> Sábado às 16:00h</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <div id="icone-atendimento" class="icon icon-atendimento"></div>
+                <div class="evento">
+                    <img src="assets/meninos.png" alt="meninos" class="meninos">
+                    <h4>Evangelização infanto-juvenil</h4>
+                    <p>Quinta-feira 20:00h</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section id="contato" class="contact-section">
+    <div class="contact-container">
+        <h1 id="ajuda" class="contact-title">Como ajudar?</h1>
+
+        <form action="https://api.staticforms.dev/submit" method="POST" class="contact-form">
+            <input type="hidden" name="accessKey" required value="sf_i028f367m92clb83j42cc9ln">
+            <input type="hidden" name="redirectTo" value="index.html">
+
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input class="input1" type="text" id="nome" name="nome" placeholder="Seu nome aqui...">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="input2" type="email" id="email" name="email" placeholder="Seu Email aqui...">
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea class="input3" id="mensagem" name="mensagem" placeholder="Sua mensagem para nós..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+    </div>
+</section>
+<div class="linha"></div>
+    <div class="barra-marrom petry" id="petry">
+            <a href="html/form_feedback_unico (1).html" class="button">Feedback</a>
+            <a href="html/Perguntas Freq.html" class="button">Perguntas</a>
+    </div>
+    
+    <div class="rodape">
+    <h2 class="loc">Localização:</h2>
+  </div>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.5804609901415!2d-53.446871699999996!3d-24.946358300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f3d470dd8c8fd5%3A0xec68a11460d6f801!2sR.%20Volunt%C3%A1rios%20da%20P%C3%A1tria%2C%201670%20-%20Centro%2C%20Cascavel%20-%20PR%2C%2085812-160!5e0!3m2!1spt-BR!2sbr!4v1749645608896!5m2!1spt-BR!2sbr"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      class="map">
+    </iframe>
+  </div>
+
+  <div>
+    <h4 class="loc2">Rua Voluntários da Pátria, 1670, Cascavel, PR, Brazil</h4>
+  </div>
+
+  <footer>
+    <h3>&copy; Casa de Francisco 2025</h3>
+    <div class="icones">
+        <a href="https://www.instagram.com/casadefrancisco.cvel/">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5545999682445&text=Ol%C3%A1%2C%20me%20interessei%20sobre%20a%20casa%20de%20francisco!">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+    </div>
+</footer>
+<a href="html/doacao.html" class="btn-doacao-container">
+    <div class="btn-doacao-label">
+        <h3>Doe agora!</h3>
+    </div>
+    <div class="btn-doacao-icone">
+        <ion-icon class="heart-outline" size="large" name="heart-outline"></ion-icon>
+    </div>
+</a>
+
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
+</html>

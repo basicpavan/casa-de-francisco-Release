@@ -1,0 +1,182 @@
+.body-cadastro {
+    background-color: #fbf5e7; /* bg-fundo */
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+}
+
+/* Header escuro */
+.header-cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem; /* h-40 */
+    padding: 1rem 0;
+    background-color: #3a2e25; /* bg-escuro */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.logo-animada {
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-animada:hover {
+    transform: scale(1.1);
+}
+
+/* Layout Central */
+.cadastro-section {
+    padding-top: 2.5rem; /* mt-10 */
+}
+
+.container-cadastro {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* O Card Marrom */
+.form-card {
+    background-color: #3a2e25; /* bg-escuro */
+    color: #fbf5e7; /* text-fundo */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    
+    padding: 2.5rem 2rem; /* px-8 py-10 */
+    width: 50%; /* w-[50%] */
+}
+
+@media (max-width: 768px) {
+    .form-card {
+        width: 90%; /* Ajuste para celular */
+    }
+}
+
+/* Área dos Inputs (Container Relativo) */
+.steps-container {
+    position: relative;
+    width: 75%;
+    height: 10rem; /* h-40 */
+}
+
+/* Passos Individuais */
+.form-step {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease; /* duration-500 */
+}
+
+.form-step h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Estados de Animação */
+.form-step.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.form-step.inactive {
+    opacity: 0;
+    transform: translateY(20px); /* translate-y-20 */
+    pointer-events: none;
+}
+
+/* Estilo do Input */
+.input-padrao {
+    border: 2px solid #fbf5e7; /* border-fundo */
+    color: #3a2e25; /* text-escuro */
+    background-color: #fbf5e7; /* bg-fundo */
+    
+    border-radius: 9999px; /* rounded-full */
+    padding: 0 1.25rem; /* px-5 */
+    width: 100%;
+    height: 45px;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-padrao:focus {
+    box-shadow: 0 0 0 2px rgba(251, 245, 231, 0.5);
+}
+
+/* Área dos Botões */
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    width: 75%;
+    margin-top: 1rem;
+}
+
+.action-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.action-right {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    grid-column: 2 / span 2; /* Ocupa o resto do espaço */
+}
+
+/* Estilo dos Botões */
+.btn-action {
+    padding: 0.5rem 1rem; /* px-4 */
+    border-radius: 9999px; /* rounded-full */
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+/* Botão Primário (Claro) */
+.btn-primary {
+    background-color: #fbf5e7; /* bg-fundo */
+    color: #3a2e25; /* text-marrom */
+}
+
+.btn-primary:hover {
+    background-color: #4F4134; /* hover:bg-marrom (tom médio) */
+    color: #fbf5e7; /* hover:text-fundo */
+}
+
+/* Botão Secundário (Escuro/Voltar) */
+.btn-secondary {
+    background-color: #4F4134; /* bg-marrom */
+    color: #fbf5e7;
+}
+
+.btn-secondary:hover {
+    background-color: #fbf5e7;
+    color: #3a2e25;
+}
+
+/* Utilitário para esconder elementos */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}

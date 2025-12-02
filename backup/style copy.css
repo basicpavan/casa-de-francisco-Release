@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+body {
+    /* Cor de fundo principal (creme/bege) */
+    background-color: #fbf5e7;
+    /* Fontes importadas do Google Fonts */
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+header {
+    width: 100%;
+}
+.header-container {
+    position: relative;
+    width: 100%;
+}
+.barra-marrom {
+    background-color: #3a2e25;
+    height: 110px;
+    padding: 10px 0;
+}
+.top-nav {
+        padding-top: 10px;
+        margin-right: 200px;
+        
+}
+
+.top-nav ul {
+    display: flex;
+    gap: 71.2px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 900px;
+    height: 60px; /* Altura fixa para alinhar com o logo */
+
+}
+
+.top-nav li {
+    padding: 0 15px;
+}
+.top-nav li.logo-spacer {
+    width: 140px; /* Espaço reservado para o logo */
+    padding: 0;
+}
+
+
+.top-nav a {
+    color: #3a2e25;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+/* 2. O Logo Central (A Mágica) */
+
+.logo{
+    z-index: 10;
+    left: 49%;
+    transform: translateX(-50%);
+    position: absolute;
+    max-width: 180px;
+    max-height: 200px;
+    margin-top: -7rem;
+}
+.sub-nav {
+    background-color: #fbf5e7;
+    text-align: center;
+    padding: 45px 30px 15px 0px; /* Espaço extra no topo para o logo */
+    
+}
+
+.sub-nav a {
+    color: #3a2e25;
+    font-family: 'Merriweather', serif; /* Fonte mais estilizada */
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* --- Conteúdo Principal --- */
+main {
+    /* Centraliza o conteúdo principal na página */
+    max-width: 900px;
+}
+
+/* 1. Seção do Carrossel */
+.hero-carousel {
+    margin-top: 10px;
+    background-color: #3a2e25; /* Mesma cor da barra superior */
+    height: 350px; /* Altura do banner */
+    border-radius: 15px;
+    width: 100vw;
+    /* Centraliza os "..." */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alinha na base */
+    padding-bottom: 15px;
+}
+
+.carousel-dots {
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 5px;
+}
+
+/* 2. Seção de Boas-Vindas */
+.welcome-section {
+    width: 100vw;
+    text-align: left;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;    
+}
+
+.welcome-section h1 {
+    font-family: 'Merriweather', serif;
+    color: #3a2e25;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7; /* Espaçamento entre linhas */
+    margin-bottom: 15px;
+    color: #333;
+}
+.linha{
+    width: 100%;
+    background-color: #3a2e25;
+    height: 1.2px;
+}
+.wel-titulo{
+    margin-left: 35vw;
+}
+.wel-p {
+    max-width: 80vw;
+    margin-left: 10%;
+    margin-top: 20px;
+}
+

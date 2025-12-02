@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perguntas Frequentes</title>
+  <style>
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background-color: #f8f1e8;
+      color: #3a2b1f;
+      margin: 0;
+      padding: 60px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 50px;
+      color: #1f1f1f;
+    }
+
+    .faq-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 60px;
+      max-width: 900px;
+      align-items: start; /* ✅ Mantém as caixas independentes */
+    }
+
+    .faq-card {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.08);
+      border: 2px solid #bca48b;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      align-self: start; /* ✅ Evita o grid esticar outras caixas */
+    }
+
+    .faq-header {
+      background-color: #7a5b44;
+      color: #f9f9f9;
+      padding: 12px 18px;
+      font-weight: 600;
+      font-size: 1rem;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .faq-header::after {
+      content: '+';
+      position: absolute;
+      right: 18px;
+      top: 12px;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-card.active .faq-header::after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+
+    .faq-body {
+      padding: 0 18px;
+      color: #3a2b1f;
+      line-height: 1.5;
+      font-size: 0.95rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq-card.active .faq-body {
+      padding: 18px;
+      max-height: 500px;
+    }
+
+    /* Terceira caixa centralizada */
+    .faq-container::after {
+      content: "";
+      grid-column: 1 / -1;
+    }
+
+    .faq-card.bottom {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: 400px;
+    }
+
+    @media (max-width: 768px) {
+      .faq-container {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-card.bottom {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Perguntas Frequentes</h1>
+
+  <div class="faq-container">
+    <div class="faq-card">
+      <div class="faq-header">Os atendimentos espirituais são gratuitos?</div>
+      <div class="faq-body">
+        Sim. Todos os atendimentos oferecidos pela Casa de Francisco, como passe espiritual, orientações fraternas e reuniões doutrinárias, são gratuitos, seguindo os princípios da caridade e do Evangelho.
+      </div>
+    </div>
+
+    <div class="faq-card">
+      <div class="faq-header">Os atendimentos espirituais são gratuitos?</div>
+      <div class="faq-body">
+        Sim. Todos os atendimentos oferecidos pela Casa de Francisco, como passe espiritual, orientações fraternas e reuniões doutrinárias, são gratuitos, seguindo os princípios da caridade e do Evangelho.
+      </div>
+    </div>
+
+    <div class="faq-card bottom">
+      <div class="faq-header">Os atendimentos espirituais são gratuitos?</div>
+      <div class="faq-body">
+        Sim. Todos os atendimentos oferecidos pela Casa de Francisco, como passe espiritual, orientações fraternas e reuniões doutrinárias, são gratuitos, seguindo os princípios da caridade e do Evangelho.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const headers = document.querySelectorAll('.faq-header');
+
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const card = header.parentElement;
+        const isActive = card.classList.contains('active');
+
+        // Fecha todas as outras perguntas
+        document.querySelectorAll('.faq-card').forEach(c => c.classList.remove('active'));
+
+        // Se a clicada não estava ativa, abre ela
+        if (!isActive) {
+          card.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
